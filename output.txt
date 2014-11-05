@@ -1,0 +1,40 @@
+PID 1 arrives at 3 ms. Base Priority: 30, Burst: 50
+PID 1 runs at 3ms, remaining burst 50
+PID 2 arrives at 4 ms. Base Priority: 0, Burst: 170
+PID 3 arrives at 7 ms. Base Priority: 30, Burst: 90
+PID 4 arrives at 11 ms. Base Priority: 30, Burst: 150
+PID 5 arrives at 13 ms. Base Priority: 0, Burst: 120
+(1) 13 ms: 
+(2) PID 1's Quantum expires, remaining burst 40
+(3) PID 4 runs, remaining burst 150
+PID 6 arrives at 14 ms. Base Priority: 60, Burst: 80
+(1) 23 ms: 
+(2) PID 4's Quantum expires, remaining burst 140
+(3) PID 6 runs, remaining burst 80
+PID 6 finishes at 103ms
+PID 4 runs at 103ms, remaining burst 140
+PID 4 finishes at 243ms
+PID 3 runs at 243ms, remaining burst 90
+PID 3 finishes at 333ms
+PID 1 runs at 333ms, remaining burst 40
+PID 1 finishes at 373ms
+PID 5 runs at 373ms, remaining burst 120
+PID 5 finishes at 493ms
+PID 2 runs at 493ms, remaining burst 170
+PID 2 finishes at 663ms
+PID 7 arrives at 700 ms. Base Priority: 60, Burst: 10
+PID 7 runs at 700ms, remaining burst 10
+PID 7 finishes at 710ms
+================Statistics===========================
+Pid          turnaround time(msec)          waiting time(msec) 
+6           		89    		     9   ,turnaround_ALL: 89
+4           		232    		     82   ,turnaround_ALL: 321
+3           		326    		     236   ,turnaround_ALL: 647
+1           		370    		     320   ,turnaround_ALL: 1017
+5           		480    		     360   ,turnaround_ALL: 1497
+2           		659    		     489   ,turnaround_ALL: 2156
+7           		10    		     0   ,turnaround_ALL: 2166
+......................................................
+Average turnaround time: 309 msec, 
+ average waiting time: 213 msec, 
+ number of processes scheduled: 7

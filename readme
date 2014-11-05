@@ -1,0 +1,43 @@
+/* Group member:
+ * Jiayi Peng, Yi Li
+ * ID: 4645102, 3421834
+ * x500: pengx077, lixxx503
+ */
+
+
+How to use:----------------------------------------------------------------------------
+run make.
+
+the executable HybridScheduler will be created and run. 
+
+
+
+
+
+
+Other info:----------------------------------------------------------------------------
+input time quantum and some other info before starting scheduling.
+
+comment out #define DEBUG  on line 28 if want less debugging info printed to the terminal.
+
+change the variable "useTimer" to true if want to utilize SetiTimer() virtual timer functionality, but it is very slow compared to not using it.
+
+output file: output.txt (can be over 200MB if we have 1 million processes) 
+=============input file====================
+input file: 2 files provided or user specifed file(must be in this directory).
+
+The first line(Header line) is ignored.
+
+if the input file contains duplicated pids, then we maintain another red black tree to sanitize the input file lines.
+if not sure, choose 'yes'(it contains dupPids). 
+
+if the input file contains symbols that are not integers, you can choose to ignore that line or exit beforehand. 
+===========================================
+
+
+framework by others are specified at the beginning of HybridScheduler.cpp
+
+HybridScheduler.h contains all the declarations of functions in HybridScheduler.cpp so that we don't need to move functions around in .cpp
+
+valgrind checked. no memory leak detected.
+
